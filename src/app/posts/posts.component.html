@@ -1,0 +1,25 @@
+<div class="col-md-6">
+  <h2> Post Details</h2>
+  
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>UserId</th>
+      <th>PostId</th>
+      <th>Title</th>
+      <th>Body</th>
+    </tr>
+  </thead>
+    <tbody>
+    <tr *ngFor="let post of posts">
+      <td>{{post.userId}}</td>
+      <td>{{post.id}}</td>
+      <td>{{post.title}}</td>
+      <td>{{post.body}}</td>
+      <td>
+        <button class="btn btn-danger" (click)="deletePost(post)">Delete</button>
+      </td>  
+    </tr>
+    </tbody>
+  </table>
+  </div>
